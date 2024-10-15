@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Buenas Burgas</title>
 </head>
 <body>
     <header>
-        <img src="img/logo.png" alt="logo" />
+        <div class="logo">
+            <a href="index.html"><img src="img/logo.png" alt="logo" /></a>
+        </div>
         <nav id="botonera">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -19,10 +24,17 @@
     </header>
     <main>
         <section>
-            <video autoplay muted loop>
-                <source src="./img/video.mp4" type="video/mp4" />
-                <track src="./subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default />
-            </video>
+            <div>
+                <video autoplay muted loop>
+                    <source src="img/video.mp4" type="video/mp4" />
+                    <track src="subtitulos.vtt" kind="subtitles" srclang="es" label="Español" default />
+                </video>
+            </div>
+            <div>
+                <h1>Bienvenido a Nuestro Restaurante</h1>
+                <p>Disfruta de nuestras deliciosas hamburguesas y mucho más.</p>
+                <a href="menu.html">Ver Menú</a>
+            </div>
         </section>
     </main>
     <footer>

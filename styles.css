@@ -1,4 +1,11 @@
+.logo img {
+    height: 100px; 
+    width: auto; 
+    background-color:#e49333;
+    border-radius: 50%;
+}
 header{
+    font-family: 'Roboto', sans-serif;
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5), /* Color negro semitransparente */
         rgba(0, 0, 0, 0.2) /* Color negro semitransparente */
@@ -7,6 +14,9 @@ header{
     background-position: center; /* Centra la imagen de fondo */
     
 }
+main p {
+    font-family: 'Roboto', sans-serif;
+}
 footer {
     background-color: #333;
     color: white;
@@ -14,9 +24,40 @@ footer {
     padding: 20px 0;
     margin-top: 20px;
 }
-#botonera ul {
+/*estilos de la barra de navegacion*/
+#botonera{
+    display: flex;
+    align-items: center;
+}
+#botonera ul{
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
+    margin: 0;
+    padding: 0;
+  
+}
+#botonera ul li{
+    padding: 20px;
+    align-items: center;
+    width: 85px;
+    border: 1px solid rgb(228, 145, 51);
+    text-align: center;
+    margin: 15px;
+    border-radius: 50px;
+    background-color: rgb(228, 145, 51);
 }
 #botonera ul li a{
     text-decoration: none;
-}    
+    color: white;
+    font-weight: bold;
+}
+#botonera ul li:hover{
+    background-color: rgb(184, 133, 39);
+    transform: scaleX(1.1);
+    transition: all 0.3s;
+}
+#botonera ul li a:hover{
+    color: orange;
+    transition: all 0.5s;
+}
