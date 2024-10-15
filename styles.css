@@ -1,0 +1,22 @@
+header{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5), /* Color negro semitransparente */
+        rgba(0, 0, 0, 0.2) /* Color negro semitransparente */
+    ), url(img/banner.jpg);
+    background-size: cover; /* Asegura que la imagen de fondo cubra todo el área del header */
+    background-position: center; /* Centra la imagen de fondo */
+    
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+#botonera ul {
+    list-style: none;
+}
+#botonera ul li a{
+    text-decoration: none;
+}    
