@@ -17,7 +17,7 @@ header{
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.2), 
         rgba(0, 0, 0, 0.5) 
-    ), url(img/banner.jpg);
+    ), url(img/banner.webp);
     background-size: cover; 
     background-position: center; 
     
@@ -62,7 +62,7 @@ main {
     background-color: #e49333;
     border-radius: 5px;
     text-decoration: none;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 .hero .btn:hover {
     background-color: #c87a2e;
