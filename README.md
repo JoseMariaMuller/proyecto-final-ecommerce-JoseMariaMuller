@@ -20,7 +20,7 @@ Este proyecto está bajo la Licencia Mia.
 
 ## Contacto
 
-Para más información, no dudes en contactarnos a través de nuestras redes sociales o en nuestro [formulario de contacto](contacto.html).
+Para más información, no dudes en contactarnos a través de nuestras redes sociales.
 
 ---
 
