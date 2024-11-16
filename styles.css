@@ -1,3 +1,9 @@
+:root {
+    --main-color: #e49333;
+    --hover-color: #c87a2e;
+    --text-color: #333;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +12,7 @@ body {
 .logo img {
     height: 10vh; 
     width: auto; 
-    background-color: #e49333;
+    background-color: var(--main-color);
     border-radius: 50%;
 }
 
@@ -18,14 +24,14 @@ header {
     padding: 5vh 10%; 
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.2), 
-        rgba(0, 0, 0, 0.5) 
+        rgba(0, 0, 0, 0.5)
     ), url(img/banner.webp);
     background-size: cover; 
     background-position: center; 
 }
 
 h2 {
-    color: #e49333;
+    color: var(--main-color);
 }
 
 main {
@@ -33,13 +39,28 @@ main {
     font-family: 'Open Sans', sans-serif;
 }
 
-/* Estilos para la section hero */
+/* Estilos para botones */
+.btn {
+    display: inline-block;
+    padding: 1vh 2vw; 
+    font-size: 1.2rem; 
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 3vh; 
+}
+
+.btn:hover {
+    background-color: var(--hover-color);
+}
+
+/* Estilos para la sección hero */
 .hero {
     position: relative;
     text-align: center;
     color: white;
     overflow: hidden;
-     
     height: 75vh;
     display: flex;
     flex-direction: column; 
@@ -57,31 +78,14 @@ main {
 
 .hero h1 {
     font-size: 3rem; 
-    margin-bottom: 3vh; 
-    color: #e49333;
-    margin: 0;
+    margin: 0 0 3vh; 
+    color: var(--main-color);
 }
 
 .hero p {
     font-size: 1.5rem; 
-    margin-bottom: 3vh; 
+    margin: 0 0 3vh; 
     color: white;
-    margin: 0;
-}
-
-.hero .btn {
-    display: inline-block;
-    padding: 1vh 2vw; 
-    font-size: 1.2rem; 
-    color: white;
-    background-color: #e49333;
-    border-radius: 5px;
-    text-decoration: none;
-    margin-top: 3vh; 
-}
-
-.hero .btn:hover {
-    background-color: #c87a2e;
 }
 
 /* Estilos para el video de fondo */
@@ -139,32 +143,33 @@ main {
     padding: 5vh; 
     transition: transform 0.2s;
     flex: 1 1 250px; 
-    max-width: 300px; 
+    max-width: 400px; 
 }
 
 .feature-item:hover {
     transform: translateY(-5px);
 }
 
-.feature-item img {
+.feature-item img, .card-img {
     width: 10vw; 
     height: 10vw; 
     border-radius: 50%;
     margin-bottom: 15px;
     object-fit: cover;
-    border: 2px solid #e49333;
+    border: 2px solid var(--main-color);
 }
 
-.feature-item h3 {
-    color: #e49333;
+.feature-item h3, .card h4 {
+    color: var(--main-color);
     font-size: 1.5rem; 
     margin: 1vh 0; 
 }
 
-.feature-item p {
+.feature-item p, .card p {
     font-size: 1rem;
 }
 
+/* Estilos de contacto */
 .contact {
     text-align: center;
     padding: 5vh 0; 
@@ -181,21 +186,6 @@ main {
     margin-bottom: 2vh; 
 }
 
-.contact .btn {
-    display: inline-block;
-    padding: 1vh 2vw; 
-    font-size: 1.2rem; 
-    color: white;
-    background-color: #e49333;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.contact .btn:hover {
-    background-color: #c87a2e;
-}
-
-/* Estilos iframe */
 .map-container {
     max-width: 100%; 
     margin: 2vh 0; 
@@ -208,7 +198,7 @@ main {
     border: none; 
 }
 
-/* Estilos de la barra de navegación */
+/* Estilos de navegación */
 #botonera {
     display: flex;
     align-items: center;
@@ -226,11 +216,11 @@ main {
     padding: 2vh; 
     align-items: center;
     width: 10vw; 
-    border: 1px solid rgb(228, 145, 51);
+    border: 1px solid var(--main-color);
     text-align: center;
     margin: 1.5vh; 
     border-radius: 50px;
-    background-color: rgb(228, 145, 51);
+    background-color: var(--main-color);
     min-width: 100px; 
 }
 
@@ -260,12 +250,53 @@ main {
 }
 
 .producto {
-    color: white; 
-    padding: 2vh; 
-    margin: 1vh; 
-    flex: 1 1 200px; 
-    box-sizing: border-box; 
-    text-align: center; 
+    position: relative; /* Necesario para el pseudo-elemento nuevo*/
+    background-color: #fff;
+    padding: 2vh;
+    margin: 1vh;
+    flex: 1 1 300px; /* Tamaño base */
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.5s ease, box-shadow 0.4s ease;
+    overflow: hidden; /* Esconde el fondo que se sale nuevo*/
+}
+.producto:hover h2 {
+    color: #fff;  /* Color blanco en hover para hacer el texto más visible */
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);  /* Sombra más intensa para mejorar la legibilidad */
+}
+/*nuevo*/
+/* Pseudo-elemento para el fondo animado */
+.producto::before {
+    content: ""; /* Es necesario para el pseudo-elemento */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #F2994A, #F2C94C, #F27D16); /* Gradiente diagonal */
+    transition: all 0.5s ease-in-out; /* Animación suave */
+    z-index: -1; /* Pone el fondo detrás del contenido */
+    transform: scaleX(0) scaleY(0); /* Comienza desde cero */
+    transform-origin: bottom left; /* Inicia desde la esquina inferior izquierda */
+}
+/* Efecto al pasar el mouse sobre la card */
+.producto:hover::before {
+    transform: scaleX(1) scaleY(1); /* Expande el gradiente a través de la card */
+}
+.producto:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+} 
+.producto img {
+    width: 100%; 
+    max-width: 100%; 
+    height: 250px; 
+    max-height: 250px; 
+    object-fit: contain; 
+    display: block;
+    margin: 0 auto; 
 }
 
 /* Estilos formulario */
@@ -286,8 +317,35 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center; 
     box-sizing: border-box;
+    position: relative; /* Necesario para el pseudo-elemento */
+    overflow: hidden;
+    transition: all 0.4s ease;
+    z-index: 1;
 }
+.contact-form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #F2994A, #F2C94C, #F27D16); /* Gradiente diagonal */
+    transition: all 0.5s ease-in-out; /* Animación suave */
+    z-index: -1; /* Pone el fondo detrás del contenido */
+    transform: scaleX(0) scaleY(0); /* Comienza desde cero */
+    transform-origin: bottom left; /* Inicia desde la esquina inferior izquierda */
+}
+.contact-form:hover::before {
+    transform: scaleX(1) scaleY(1); /* Expande el gradiente a atravéz de la card */
+}
+.contact-form:hover::before {
+    transform: scaleX(1) scaleY(1); /* Expande el gradiente a través de la card */
+}
+.contact-form:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Más sombra para el hover */
 
+}
 .contact-form label {
     display: block;
     margin: 1vh 0 0.5vh; 
@@ -302,17 +360,21 @@ main {
     border: 1px solid #ccc; 
     border-radius: 5px;
     box-sizing: border-box; 
+    position: relative; /* Necesario para el pseudo-elemento */
+    background-color: #fff;
+    z-index: 1; /* Asegura que el contenido esté encima del pseudo-elemento */
+    overflow: hidden;
 }
 
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
-    border-color: #e49333; 
+    border-color: var(--main-color); 
     outline: none; 
 }
 
 .contact-form button {
-    background-color: #e49333;
+    background-color: var(--main-color);
     color: white;
     padding: 1vh 2vw;
     border: none;
@@ -323,9 +385,8 @@ main {
 }
 
 .contact-form button:hover {
-    background-color: #c87a2e; 
-}
-
+    background-color: var(--hover-color); 
+} 
 /* Estilos reseñas */
 .reseñas {
     padding: 5vh 0; 
@@ -334,7 +395,7 @@ main {
 }
 
 .reseñas h2 {
-    color: #e49333; 
+    color: var(--main-color); 
     font-size: 2.5rem; 
     margin-bottom: 3vh; 
 }
@@ -355,28 +416,8 @@ main {
     transition: transform 0.2s; 
 }
 
-.card p {
-    font-size: 1rem; 
-    color: #333; 
-}
-
-.card h4 {
-    margin-top: 1.5vh; 
-    font-weight: bold; 
-    color: #e49333; 
-}
-
 .card:hover {
     transform: translateY(-5px); 
-}
-
-.card-img {
-    width: 10vw; 
-    height: 10vw; 
-    border-radius: 50%; 
-    margin-bottom: 15px; 
-    object-fit: cover; 
-    border: 2px solid #e49333; 
 }
 
 footer {
@@ -384,7 +425,7 @@ footer {
     color: white;
     text-align: center;
     padding: 2vh 0; 
-    margin-top: 2vh; 
+    font-size: 1.2rem;
 }
 
 .footer-content {
@@ -424,10 +465,8 @@ footer {
 }
 
 .social-media a:hover {
-    color: #e49333; 
+    color: var(--main-color); /* Cambié el color a la variable definida */
 }
-
-/* Media Query para pantallas pequeñas */
 @media (max-width: 1000px) {
     .feature-item img {
         width: 150px; 
@@ -437,5 +476,12 @@ footer {
     .card-img {
         width: 120px; 
         height: 120px; 
+    }
+    .logo img {
+        width: 120px;
+        height: 120px; 
+        
+        
+        
     }
 }
