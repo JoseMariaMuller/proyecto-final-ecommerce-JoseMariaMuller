@@ -311,7 +311,11 @@ main {
     display: block;
     margin: 0 auto; 
 }
-
+.btn-comprar {
+    background-color: var(--main-color);
+    border-radius: 15px;
+    color: white;
+}
 /* Estilos formulario */
 .contact-main {
     display: flex;
@@ -493,8 +497,9 @@ footer {
     .logo img {
         width: 120px;
         height: 120px; 
-        
-        
-        
     }
+    .footer-nav ul li {
+        margin: 0 1vw; 
+    }
+    
 }

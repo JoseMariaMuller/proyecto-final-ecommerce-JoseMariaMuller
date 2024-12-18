@@ -29,8 +29,8 @@
         </nav>
     </header>
     <main>
-        <section class="productos">
-            <div class="producto">
+        <section class="productos" id="cartadeproductos">
+            <!-- <div class="producto">
                 <img src="img/doblecuartodelibraconqueso.jpg"
                     alt="Producto 1">
                 <h2>Doble cuarto de libra con queso</h2>
@@ -80,7 +80,15 @@
                 <img src="./img/sundaechocolate.jpg" alt="Producto 4">
                 <h2>ChocoDelight Sundae</h2>
                 <a href="#">Ver Producto</a>
-            </div>
+            </div> -->
+        </section>
+        <section id="carrito">
+        <h2>Carrito</h2>
+        <ul></ul>
+        <p>Total a pagar: $0</p>
+        <input id="btnborrar" type="button" value="Borrar">
+        <input id="btnpagar" type="button" value="Pagar">
+        <p id="mensaje"></p>
         </section>
     </main>
     <footer>
@@ -102,6 +110,7 @@
             <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
