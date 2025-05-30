@@ -1,27 +1,27 @@
-# Buenas Burgas - Restaurante Gourmet
+# 🍔 Buenas Burgas – Proyecto Final Ecommerce
 
-¡Bienvenido a Buenas Burgas! Nuestro restaurante se especializa en ofrecer las hamburguesas más deliciosas y una experiencia gastronómica inolvidable.
+Bienvenido a **Buenas Burgas**, una web de ecommerce tipo fast food desarrollada como proyecto final personal.
 
-## Características
+## 🌐 Demo en vivo
 
-- **Hamburguesas Gourmet**: Experimenta sabores únicos con nuestros ingredientes frescos.
-- **Ambiente Agradable**: Disfruta de tu comida en un espacio cómodo y acogedor.
-- **Contacto Fácil**: Preguntas o comentarios, ¡contáctanos fácilmente!
+👉 [Ver sitio online](https://josemariamuller.github.io/proyecto-final-ecommerce-JoseMariaMuller/)
 
-## Tecnologías Usadas
+## ✨ Características
 
-- **HTML5**: Para la estructura de la página.
-- **CSS3**: Para el diseño y la presentación.
+- Catálogo de productos en formato **cards**
+- Carrito dinámico: agregar, quitar, sumar/restar cantidades
+- Contador en el icono del carrito 🛒
+- Página de carrito separada
+- Formulario de contacto con validación y envío por **Formspree**
+- Estilos modernos con **Bootstrap + estilos personalizados**
+- Diseño **responsive** (funciona bien en mobile y desktop)
+- Código limpio y organizado (HTML / CSS / JS separados)
 
+## 📁 Tecnologías usadas
 
-## Licencia
+- HTML5
+- CSS3 (con Bootstrap 5.3)
+- JavaScript (DOM, localStorage, interacción)
+- Git + GitHub Pages
+- Formspree (para manejar el formulario de contacto)
 
-Este proyecto está bajo la Licencia Mia.
-
-## Contacto
-
-Para más información, no dudes en contactarnos a través de nuestras redes sociales.
-
----
-
-¡Esperamos que disfrutes de tu experiencia en Buenas Burgas!
