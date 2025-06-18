@@ -55,7 +55,7 @@
 
     <!-- HERO -->
     <section class="hero text-white d-flex align-items-end text-center">
-        <video autoplay muted loop playsinline>
+        <video autoplay muted loop playsinline preload="auto" poster="img/banner.webp">
             <source src="img/videohero.mp4" type="video/mp4">
         </video>
         <div class="hero-content container pb-5">
@@ -122,7 +122,8 @@
         <div class="container">
             <h2 class="mb-4 text-warning text-center">Reseñas de Nuestros Clientes</h2>
 
-            <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"  data-bs-touch="true">
+            <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+                data-bs-touch="true">
 
                 <div class="carousel-inner">
 
@@ -186,6 +187,20 @@
 
     <!-- Bootstrap JS bundle + lógica propia -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector('#reviewsCarousel');
+            if (carousel) {
+                const bsCarousel = new bootstrap.Carousel(carousel, {
+                    interval: 3000,
+                    ride: 'carousel',
+                    touch: true,
+                    pause: false
+                });
+            }
+        });
+    </script>
+
     <script src="js/script.js" defer></script>
 </body>
 

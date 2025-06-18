@@ -173,3 +173,4 @@ document.addEventListener('DOMContentLoaded', () => {
   const vaciarBtn = document.getElementById('vaciar-cart-page');
   if (vaciarBtn) vaciarBtn.addEventListener('click', clearCart);
 });
+
