@@ -87,7 +87,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: #0005;
+     background: rgba(0, 0, 0, 0.5); /* antes estaba 0.3 */
 }
 
 .hero-content {
