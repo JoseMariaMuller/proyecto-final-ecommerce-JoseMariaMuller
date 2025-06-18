@@ -139,7 +139,7 @@ body {
 .review-card {
     background-color: #fff;
     padding: 1rem;
-    min-height: 280px;
+    min-height: 250px;
     border-radius: var(--radius);
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
